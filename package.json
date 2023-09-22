@@ -1,0 +1,48 @@
+{
+  "name": "starter-react",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "_description_",
+  "author": "LaiBaoYuan <1727283040@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/LaiBaoYuan/starter-react#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaiBaoYuan/starter-react.git"
+  },
+  "bugs": "https://github.com/LaiBaoYuan/starter-react/issues",
+  "scripts": {
+    "dev": "vite --open --port 1024",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "axios": "^1.5.0",
+    "dayjs": "^1.11.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.3",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "postcss": "^8.4.30",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.0.2",
+    "unplugin-auto-import": "^0.16.6",
+    "vite": "^4.4.5",
+    "vite-plugin-pages": "^0.31.0",
+    "vite-plugin-svgr": "^4.0.0",
+    "vitest": "^0.34.5"
+  }
+}
