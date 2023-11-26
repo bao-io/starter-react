@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import AutoImport from "unplugin-auto-import/vite";
 import Pages from "vite-plugin-pages";
 import Svgr from "vite-plugin-svgr";
+import UnoCSS from "unocss/vite";
 
 import { fileURLToPath } from "url";
 import { resolve } from "path";
@@ -15,15 +16,11 @@ export default defineConfig(({ command }) => ({
     __DEV__: command === "serve",
   },
   plugins: [
+    UnoCSS(),
     react(),
     AutoImport({
       imports: ["react", "react-router-dom"],
-      dirs: [
-        r("src/stores"),
-        r("src/utils"),
-        r("src/apis"),
-        r("src/composables"),
-      ],
+      dirs: [r("src/stores"), r("src/composables")],
     }),
     Pages(),
     Svgr(),
