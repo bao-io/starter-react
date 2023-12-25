@@ -1,7 +1,8 @@
 {
   "name": "starter-react",
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.7.5",
   "description": "_description_",
   "author": "LaiBaoYuan <1727283040@qq.com>",
   "license": "MIT",
@@ -12,11 +13,13 @@
   },
   "bugs": "https://github.com/LaiBaoYuan/starter-react/issues",
   "scripts": {
-    "dev": "vite --open --port 1024",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "dev": "vite",
+    "build": "vite build",
+    "check": "tsc --noEmit",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "simple-git-hooks"
   },
   "dependencies": {
     "axios": "^1.5.0",
@@ -26,16 +29,19 @@
     "react-router-dom": "^6.16.0"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.4.6",
     "@types/node": "^20.6.3",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
+    "@unocss/eslint-plugin": "^0.58.0",
     "@unocss/reset": "^0.57.7",
     "@vitejs/plugin-react": "^4.0.3",
-    "eslint": "^8.45.0",
+    "eslint": "^8.49.0",
+    "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "lint-staged": "^15.2.0",
+    "simple-git-hooks": "^2.9.0",
     "typescript": "^5.0.2",
     "unocss": "^0.57.7",
     "unplugin-auto-import": "^0.16.6",
@@ -43,5 +49,11 @@
     "vite-plugin-pages": "^0.31.0",
     "vite-plugin-svgr": "^4.0.0",
     "vitest": "^0.34.5"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged && pnpm check"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }

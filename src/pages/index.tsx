@@ -1,4 +1,4 @@
-import Vite from "@/icons/vite.svg?react";
+import Vite from '@/icons/vite.svg?react'
 
 export default function Page() {
   return (
@@ -6,5 +6,5 @@ export default function Page() {
       starer react template
       <Vite />
     </div>
-  );
+  )
 }
